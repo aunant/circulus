@@ -1,0 +1,121 @@
+/* ------------ */
+/* Globaalit säädöt */
+/* ------------ */
+
+/* Oletusfontti Gothamiksi */
+body {
+  font-family: 'Gotham Narrow A','Gotham Narrow B',Helvetica,Arial,sans-serif,Nimbus Sans L;
+  color: #444;
+}
+
+/* Leipiksen säätöä */
+div#main-content {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+div#main-content p,
+div#main-content ul,
+div#main-content ol {
+  font-family: Georgia, serif;
+  margin: 1em 0;
+}
+  div#main-content li ul,
+  div#main-content li ol {
+    margin: 0;
+  }
+
+div#main-content code {
+  font-size: 0.9em;
+}
+
+/* Joillekin palikoille kuitenkin Gotham */
+div#main-content div.information-macro *,
+div#main-content div.panel *,
+div#main-content ul.inline-task-list,
+div#main-content div.toc-macro ul {
+  font-family: 'Gotham Narrow A','Gotham Narrow B',Helvetica,Arial,sans-serif,Nimbus Sans L;
+}
+
+/* linkkiväritys */
+div#main-content a,
+div.acs-side-bar a {
+  color: #C56100;
+}
+
+/* Kehys koodipätkille ja task-listille */
+pre,
+ul.inline-task-list {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  padding: 0.5em 1em;
+}
+ul.inline-task-list {
+  padding-left: 2em;
+}
+pre {
+  font-size: 0.9em;
+  overflow: auto;
+}
+
+/* ------------ */
+/* Päätunniste */
+/* ------------ */
+
+header#header {
+  background-color: #111 !important;
+}
+
+
+/* ------------ */
+/* Otsikot */
+/* ------------ */
+
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+}
+h1 {
+  text-transform: uppercase;
+}
+h1#title-text {
+  font-size: 2.4em;
+}
+
+/* ------------ */
+/* Sivupalkki */
+/* ------------ */
+
+/* Sivupalkin taustan liukuväri */
+div.acs-side-bar { 
+  background: #f1f1f1 url(https://dl.dropboxusercontent.com/u/276168/circulus-gradient.png) scroll repeat-x 0 0; 
+} 
+
+div.acs-side-bar {
+  color: #000 !important;
+}
+/* Logon pyöristys pois, haa! */
+div.avatar-img-wrapper {
+  border: none !important;
+}
+img.avatar-img {
+  background: transparent !important;
+}
+
+/* Alueen nimi otsikkomaiseksi */
+div.name a {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+div.name a:hover {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Sivupalkin väliotsikkojan väri */
+h5.ia-quick-links-header-title {
+  color: #fff;
+  background-color: #333;
+  padding: 5px 10px 2px;
+}
