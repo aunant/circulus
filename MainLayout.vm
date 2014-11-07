@@ -3,7 +3,7 @@
 <head>
     ## hasSpaceSideBar() indicates whether or not the theme supports rendering of the sidebar, not whether or not the
     ## sidebar is present on the current page. Sidebar is only present when there is a valid spaceKey
-	#set($useNewSpaceIA = $theme.hasSpaceSideBar() && $spaceKey)
+    #set($useNewSpaceIA = $theme.hasSpaceSideBar() && $spaceKey)
     #if ($sitemeshPage.getProperty("page.spacename"))
         <title>$title - $sitemeshPage.getProperty("page.spacename") - #siteTitle()</title>
     #else
@@ -67,14 +67,40 @@
         #end
     #elseif ($useNewSpaceIA && $sitemeshPage.getProperty("page.ia-sidebar"))
 
-    	<div class="ia-splitter">
-    		<div class="ia-splitter-left">
-    			<div class="ia-fixed-sidebar">
-    				$!sitemeshPage.getProperty("page.ia-sidebar")
-    			</div>
-    		</div>
+        <div class="ia-splitter">
+            <div class="ia-splitter-left">
+                <div class="ia-fixed-sidebar">
+                    $!sitemeshPage.getProperty("page.ia-sidebar")
+                </div>
+            </div>
     #end
     <!-- \#header -->
+
+<!-- muutokset alkaa -->
+#if($sitemeshPage.getProperty("page.bodyClass").equals("dashboard"))
+<div id="hy_circulus_header">
+<table>
+<tr>
+<td>
+<img src="/img/logo.png" height="99px" width="93px">
+</td>
+<td>
+     #set ($header1res=$helper.renderConfluenceMacro("{include:resources:dashboardHeader1}"))
+     $header1res
+</td>
+<td>
+    #set ($header2res=$helper.renderConfluenceMacro("{include:resources:dashboardHeader2}"))
+     $header2res
+</td>
+<td>
+    #set ($header3res=$helper.renderConfluenceMacro("{include:resources:dashboardHeader3}"))
+     $header3res
+</td>
+</tr>
+</table>
+</div> <!-- hy_circulus_header -->
+#end
+<!-- muutokset loppuu -->
 
     ## CONTENT DIV BEGINS
     #set ($showPersonalSidebar = ($sitemeshPage.getProperty("page.personal-sidebar") || $sitemeshPage.getProperty("page.show-personal-sidebar")))
