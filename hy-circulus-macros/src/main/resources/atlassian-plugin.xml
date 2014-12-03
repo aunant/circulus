@@ -1,0 +1,31 @@
+<atlassian-plugin key="${project.groupId}.${project.artifactId}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+        <param name="plugin-icon">images/pluginIcon.png</param>
+        <param name="plugin-logo">images/pluginLogo.png</param>
+    </plugin-info>
+
+    <!-- add our i18n resource -->
+    <resource type="i18n" name="i18n" location="hy-circulus-macros"/>
+    
+    <!-- add our web resources -->
+    <web-resource key="hy-circulus-macros-resources" name="hy-circulus-macros Web Resources">
+        <dependency>com.atlassian.auiplugin:ajs</dependency>
+        
+        <resource type="download" name="hy-circulus-macros.css" location="/css/hy-circulus-macros.css"/>
+        <resource type="download" name="hy-circulus-macros.js" location="/js/hy-circulus-macros.js"/>
+        <resource type="download" name="images/" location="/images"/>
+
+        <context>hy-circulus-macros</context>
+    </web-resource>
+    
+    <!-- import from the product container -->
+    <component-import key="applicationProperties" interface="com.atlassian.sal.api.ApplicationProperties" />
+
+    <xhtml-macro key="hy-initfav" name="initfav" class="fi.polarshift.confluence.InitFavMacro">
+      <category name="admin"/>
+    </xhtml-macro> 
+    
+</atlassian-plugin>
