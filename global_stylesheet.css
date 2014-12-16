@@ -80,3 +80,57 @@ h1#title-text {
   font-size: 2.4em;
 }
 
+/* Dashboardin mukautukset alkaa */
+div.dashboard .dashboard-group.left { 
+     width: 50%; 
+} 
+div.dashboard .dashboard-group.right { 
+     width: 50%; 
+}
+body.dashboard #main-header {
+//     display:none;
+       background-color:#fff;
+}
+body.dashboard #title-heading {
+      display:none;
+}
+.content-navigation .ajs-menu-bar {
+      margin-top: -15px;
+}
+#hy_circulus_header {
+     width:100%;
+     height:140px;
+     background-color:#fff;
+     overflow:hidden;
+}
+#hy_circulus_header table {
+     width:calc(100% - 140px);
+     padding:20px 0 0 0;
+     float:right;
+     position: absolute;
+     left: 140px;
+}
+#hy_circulus_header td {
+     vertical-align:top;
+     width:33%;
+}
+#hy_circulus_header img {
+    margin:  20px;
+    float:left;
+}
+#hy_dl1, #hy_dl2, #hy_dr2 {
+    background-color:#FAFAFA;
+    padding: 10px;
+    border: 1px solid #FFD800;
+    border-radius: 10px;
+}
+.aui-tabs.horizontal-tabs>.tabs-menu {
+    display:none;
+}
+#hy_dl2 .recently-updated>h2 {
+     display:none;
+}
+#hy_dr2 .tasks-report-blank h2 {
+     display:none;
+}
+/* Dashboardin mukautukset loppuu */

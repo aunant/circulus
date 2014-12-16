@@ -27,18 +27,27 @@
 
                 <div class="dashboard-group left">
 <!-- muutokset alkaa -->
+$helper.renderConfluenceMacro("{dash-initfav}")
+<div id="hy_dl1">
 #set ($left1res=$helper.renderConfluenceMacro("{include:resources:dashboardLeft1}"))
      $left1res
+</div> <!-- hy_dl1 -->
+<div id="hy_dl2">
 #set ($left2res=$helper.renderConfluenceMacro("{include:resources:dashboardLeft2}"))
      $left2res
+</div> <!-- hy_dl2 -->
 <!-- muutokset loppuu -->
                 </div>## left
                 <div class="dashboard-group right wiki-content">
 <!-- muutokset alkaa -->
+<div id="hy_dr1">
 #set ($right1res=$helper.renderConfluenceMacro("{include:resources:dashboardRight1}"))
      $right1res
+</div> <!-- hy_dr1 -->
+<div id="hy_dr2">
 #set ($right2res=$helper.renderConfluenceMacro("{include:resources:dashboardRight2}"))
      $right2res
+</div> <!-- hy_dr2 -->
 <!-- muutokset loppuu -->
                 </div>## right
             #else

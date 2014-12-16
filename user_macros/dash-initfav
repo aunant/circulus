@@ -1,0 +1,9 @@
+## Macro title: Dashboard wrapper for initfav xhtml macro
+## Macro has a body: N
+## Developed by: Jesse Lahtinen
+## Date created: 03/12/2014
+## Installed by: Jesse Lahtinen
+## @param Name:title=Name|type=string|required=true|desc=Your name
+## @noparams
+
+<ac:macro ac:name="initfav"/>

@@ -79,11 +79,9 @@
 <!-- muutokset alkaa -->
 #if($sitemeshPage.getProperty("page.bodyClass").equals("dashboard"))
 <div id="hy_circulus_header">
+<img src="/images/logo.png" height="99px" width="93px">
 <table>
 <tr>
-<td>
-<img src="/img/logo.png" height="99px" width="93px">
-</td>
 <td>
      #set ($header1res=$helper.renderConfluenceMacro("{include:resources:dashboardHeader1}"))
      $header1res
